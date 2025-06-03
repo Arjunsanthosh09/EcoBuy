@@ -1,0 +1,321 @@
+/* General Body and Main Content Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6; 
+    color: #333;
+}
+
+.main-content {
+    margin-left: 260px;
+    padding: 30px; 
+    background-color: #f4f7f6;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease; 
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: linear-gradient(to bottom, #2c3e50, #34495e); 
+    z-index: 100;
+    transition: all 0.5s ease;
+    padding: 15px 10px; /* Adjusted padding */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo-details {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar .logo-details .logo-img {
+    height: 45px; 
+    margin-right: 8px;
+}
+
+.sidebar .logo-details .logo-name {
+    color: #ecf0f1; 
+    font-size: 22px; /* Slightly larger font */
+    font-weight: 700;
+}
+
+.sidebar .nav-links {
+    margin-top: 0; /* Adjusted margin */
+    padding: 0;
+}
+
+.sidebar .nav-links li {
+    position: relative;
+    list-style: none;
+    height: 55px; /* Taller list items */
+    margin-bottom: 8px; /* Spacing between items */
+}
+
+.sidebar .nav-links li a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Faster transition */
+    padding: 0 20px; /* Adjusted padding */
+    border-radius: 10px; /* More rounded corners */
+    color: #bdc3c7; /* Lighter grey for links */
+}
+
+.sidebar .nav-links li a:hover,
+.sidebar .nav-links li a.active {
+    /* Vibrant blue on hover/active */
+    color: #fff; /* White text on hover */
+    transform: translateX(5px); /* Slight slide effect */
+}
+
+.sidebar .nav-links li i {
+    min-width: 40px; /* Wider icon area */
+    text-align: center;
+    color: inherit; /* Inherit color from parent (link) */
+    font-size: 20px; /* Larger icons */
+}
+
+.sidebar .nav-links li a .link-name {
+    color: inherit; /* Inherit color from parent (link) */
+    font-size: 16px; /* Slightly larger font */
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.sidebar .nav-links .logout-link {
+    margin-top: 40px; /* More space for logout */
+}
+
+/* Dashboard Header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px; /* More space below header */
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-header h1 {
+    font-size: 32px; /* Larger header font */
+    color: #129990; /* Darker, more prominent color */
+    margin: 0;
+    font-weight: 700;
+}
+
+.dashboard-header .date {
+    font-size: 18px; /* Larger date font */
+    color: #7f8c8d; /* Muted grey */
+    font-weight: 500;
+}
+
+/* Card Container and Cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly larger min-width */
+    gap: 25px; /* Increased gap */
+    margin-bottom: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); /* Softer, larger shadow */
+    padding: 30px; /* Increased padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease; /* Smooth transition */
+    border-left: 5px solid #129990; /* Updated border color */
+}
+
+.card:hover {
+    transform: translateY(-8px); /* More pronounced lift effect */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card:nth-child(1) { border-left-color: #2ecc71; } /* Green for Total Users */
+.card:nth-child(2) { border-left-color: #f39c12; } /* Orange for Total Products */
+.card:nth-child(3) { border-left-color: #e74c3c; } /* Red for Pending Orders */
+.card:nth-child(4) { border-left-color: #9b59b6; } /* Purple for New Registrations */
+
+.card-icon {
+    font-size: 45px; /* Larger icons */
+    color: #7f8c8d; /* Muted icon color */
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-icon {
+    color: #3498db; /* Blue on hover */
+}
+
+.card-content h3 {
+    margin: 0 0 8px 0; /* Adjusted margin */
+    font-size: 19px; /* Slightly larger font */
+    color: #555;
+    font-weight: 600;
+}
+
+.card-content p {
+    margin: 0;
+    font-size: 32px; /* Larger number font */
+    font-weight: 800;
+    color: #2c3e50; /* Darker, more prominent color */
+}
+
+/* Recent Activity and Quick Actions */
+.recent-activity,
+.quick-actions {
+    background-color: #fff;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    padding: 30px; /* Increased padding */
+    margin-bottom: 25px; /* Spacing between sections */
+}
+
+.recent-activity h2,
+.quick-actions h2 {
+    font-size: 24px; /* Larger section titles */
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.activity-item {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 20px; /* More space between items */
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #f0f0f0;
+}
+
+.activity-item:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.activity-icon {
+    font-size: 26px; /* Larger icons */
+    color: #3498db; /* Blue icon color */
+    margin-right: 20px; /* More space */
+    background-color: #ecf0f1; /* Light background for icon */
+    padding: 10px;
+    border-radius: 50%; /* Circular background */
+}
+
+.activity-details p {
+    margin: 0;
+    font-size: 16px; /* Slightly larger font */
+    color: #444;
+    line-height: 1.5;
+}
+
+.activity-details .time {
+    font-size: 14px; /* Slightly larger time font */
+    color: #95a5a6; /* Muted grey */
+    margin-top: 5px;
+    display: block;
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow buttons to wrap */
+    gap: 15px; /* Space between buttons */
+}
+
+.action-buttons button {
+    background-color: #3498db; /* Blue button */
+    color: #fff;
+    border: none;
+    padding: 12px 25px; /* Larger padding */
+    border-radius: 8px; /* More rounded corners */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.action-buttons button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px; /* Collapse sidebar on smaller screens */
+    }
+
+    .sidebar .logo-details .logo-name,
+    .sidebar .nav-links li a .link-name {
+        display: none; /* Hide text when collapsed */
+    }
+
+    .sidebar .nav-links li i {
+        min-width: auto;
+        font-size: 24px;
+    }
+
+    .sidebar .nav-links li a {
+        justify-content: center;
+    }
+
+    .main-content {
+        margin-left: 80px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header .date {
+        margin-top: 10px;
+    }
+
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        padding: 20px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 28px;
+    }
+
+    .card,
+    .recent-activity,
+    .quick-actions {
+        padding: 20px;
+    }
+
+    .card-content p {
+        font-size: 28px;
+    }
+
+    .action-buttons button {
+        width: 100%;
+        margin-right: 0;
+    }
+}

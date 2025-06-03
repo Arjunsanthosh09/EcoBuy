@@ -1,0 +1,143 @@
+.validation-message {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+}
+.validation-message.invalid {
+    color: #d9534f; /* Red for invalid */
+}
+.validation-message.valid {
+    color: #5cb85c; /* Green for valid */
+}
+password-requirements {
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 5px;
+}
+.password-requirements.invalid {
+    color: #d9534f; /* Red for invalid */
+}
+.password-requirements.valid {
+    color: #5cb85c; /* Green for valid */
+}
+/* Taker Registration Form Styling */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    color: #333;
+}
+
+.taker-form .form-group {
+    margin-bottom: 20px;
+}
+
+.taker-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.taker-form input[type="text"],
+.taker-form input[type="email"],
+.taker-form input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.taker-form input[type="text"]:focus,
+.taker-form input[type="email"]:focus,
+.taker-form input[type="password"]:focus {
+    border-color:rgb(255, 98, 0); /* Darker orange on focus */
+    outline: none;
+}
+
+.taker-form .submit-btn {
+    background-color:rgb(255, 153, 0); /* Orange */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.taker-form .submit-btn:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+    transform: translateY(-2px);
+}
+
+/* Ensure main-content padding accommodates sidebar */
+.main-content {
+    padding: 20px;
+    margin-left: 250px; /* Adjust based on sidebar width */
+    transition: margin-left 0.3s ease;
+}
+
+/* Header for the form page */
+.header {
+    background-color: #FFA500; /* Orange */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Basic responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+
+    .form-container {
+        margin: 20px;
+        padding: 20px;
+    }
+}
+.success-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    animation: slideIn 0.5s, fadeOut 0.5s 2.5s forwards;
+}
+
+.success-message i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    to { opacity: 0; }
+}
